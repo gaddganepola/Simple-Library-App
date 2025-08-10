@@ -1,5 +1,6 @@
 package com.ddg.LibraryApplication.model;
 
+
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -17,8 +18,8 @@ public class Book {
     private String title;
     @ManyToOne
     @JoinColumn(name = "author_id")
-    private String author;
+    private Author author;
     @ManyToOne
     @JoinColumn(name = "category_id")
-    private String category;
+    private Category category;
 }

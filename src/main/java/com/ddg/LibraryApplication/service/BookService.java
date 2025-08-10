@@ -19,4 +19,12 @@ public class BookService {
     public Book createBook(Book book) {
         return bookRepo.save(book);
     }
+
+    public List<Book> searchBooks(String title) {
+        return bookRepo.findByTitleContaining(title);
+    }
+
+    public List<Book> getBooksByCategory(int categoryId) {
+        return bookRepo.findByCategory_Id(categoryId);
+    }
 }
